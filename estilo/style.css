@@ -1,5 +1,15 @@
 @charset "UTF-8"; 
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -9,6 +19,7 @@
 html, body{
     min-height: 100vh; 
     background-color: darkgray;
+    font-family: var(--fonte1);
 }
 
 header{
@@ -20,6 +31,8 @@ header{
 header > h1{
     padding-top: 50px;
     font-variant: small-caps; /*outra forma: text-transform:uppercase*/
+    font-family: var(--fonte2);
+    font-size: 10vw /*10% da largura da viewport, forma de adaptar a letra a largura do dispositivo*/;
 }
 
 header >p{
@@ -36,10 +49,12 @@ header a:hover, footer a:hover{
 }
 
 section{
-    padding-top: 10vh; /*começo do efeito paralax*/
+    padding-top: 10vh; /*começo do efeito paralax , 10% da altura da viewport   */
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px; /* para os parágrafos ficarem afastados da borda*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
 }
 
 section.normal{
@@ -53,8 +68,9 @@ section.imagem{
 }
 
 section.imagem > p{
+    display: inline-block; /*caixa que se adapta ao tamanho do conteúdo*/
     background-color: rgba(0, 0, 0, 0.185);/*configuração para o texto não se confundir com a imagem*/
-    width: 400px ;
+   padding: 5px;
 }
 
 
